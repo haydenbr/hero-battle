@@ -4,12 +4,27 @@ import { TeamDto } from './team.dto';
 
 export class TeamEntity {
 	teamId: string;
-	teamName: string;
+	name: string;
 	primaryColor: string;
 	secondaryColor: string;
-	teamHeroes: HeroEntity[];
+	logo: string;
+	backgroundImage: string;
+	teamMembers: HeroEntity[];
+	private teamCaptainId: string;
 
-	constructor(team: TeamDto, heroes: HeroEntity[]) {
-		Object.assign(this, team, { teamHeroes: heroes });
+	constructor(team: TeamDto, teamMembers: HeroEntity[]) {
+		this.teamId = team.teamId;
+		this.name = team.name;
+		this.primaryColor = team.primaryColor;
+		this.secondaryColor = team.secondaryColor;
+		this.logo = team.logo;
+		this.backgroundImage = team.backgroundImage;
+		this.teamCaptainId = team.teamCaptainId;
+
+		this.teamMembers = teamMembers;
+	}
+
+	get teamCaptain() {
+		return this.teamMembers.find((h) => h.heroId === this.teamCaptainId);
 	}
 }

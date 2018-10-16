@@ -1,7 +1,10 @@
 export interface TeamDto {
 	teamId: string;
-	teamName: string;
+	name: string;
 	primaryColor: string;
 	secondaryColor: string;
-	teamHeroes: string[];
+	logo: string;
+	backgroundImage: string;
+	teamMemberIds: string[];
+	teamCaptainId: string;
 }

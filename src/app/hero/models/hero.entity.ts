@@ -3,8 +3,8 @@ import { PowerMap } from './power-map.interface';
 
 export class HeroEntity {
 	heroId: string;
-	imageUrl: string;
-	heroName: string;
+	avatar: string;
+	name: string;
 	powerMap: PowerMap;
 
 	constructor(hero: HeroDto) {

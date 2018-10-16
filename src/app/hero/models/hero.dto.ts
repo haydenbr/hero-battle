@@ -1,6 +1,8 @@
+import { PowerMap } from './power-map.interface';
+
 export interface HeroDto {
 	heroId: string;
-	imageUrl: string;
-	heroName: string;
-	powerMap: { [key: string]: number };
+	avatar: string;
+	name: string;
+	powerMap: PowerMap;
 }
