@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, Routes, RouterModule } from '@angular/router';
 
+import { HomeContainer } from '@hero-battle/core/containers';
+
 const routes: Routes = [
 	{
 		path: '',
-		loadChildren: 'src/app/landing/landing.module#LandingModule',
+		component: HomeContainer,
 	},
 	{ path: '**', redirectTo: '' },
 ];

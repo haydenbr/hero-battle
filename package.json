@@ -52,7 +52,6 @@
 		"@angular/language-service": "6.1.8",
 		"@ngrx/store-devtools": "6.1.0",
 		"@types/date-fns": "2.6.0",
-		"@types/gsap": "1.19.2",
 		"@types/jasmine": "2.8.6",
 		"@types/jasminewd2": "2.0.3",
 		"@types/lodash": "4.14.113",

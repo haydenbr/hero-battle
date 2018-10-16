@@ -36,3 +36,7 @@ yarn <start> [-c <test|uat|prod>]
 ### Routing
 
 ### Services
+
+## TODO
+
+* make it responsive
