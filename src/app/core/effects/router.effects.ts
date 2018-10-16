@@ -5,7 +5,7 @@ import { Action, Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { filter, map, tap, withLatestFrom } from 'rxjs/operators';
 
-import { RouterActions, RouterActionTypes, SessionActionTypes } from '@hero-battle/core/actions';
+import { RouterActions, RouterActionTypes } from '@hero-battle/core/actions';
 import { getRouterParams } from '@hero-battle/core/selectors';
 
 @Injectable()
@@ -18,9 +18,6 @@ export class RouterEffects {
 		map((action) => action.payload),
 		tap(({ commands, extras }) => this.router.navigate(commands, extras).then())
 	);
-
-	@Effect({ dispatch: false })
-	redirectToSpoke$ = this.actions.pipe(ofType(SessionActionTypes.LoginFail), tap(() => redirectToSpokeLogin()));
 
 	@Effect()
 	onNavigateEnd$: Observable<Action> = this.router.events.pipe(

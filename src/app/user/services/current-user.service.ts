@@ -4,12 +4,12 @@ import { HeroBattleApiService } from '@hero-battle/core/services';
 import { UserDto } from '@hero-battle/user/models';
 
 @Injectable()
-export class CurrentUserService {
+export class CurrentUserApiService {
 	private readonly endpoint = 'currentuser';
 
-	constructor(private spoke: HeroBattleApiService) {}
+	constructor(private api: HeroBattleApiService) {}
 
 	getCurrentUser() {
-		return this.spoke.get<UserDto>(this.endpoint);
+		return this.api.get<UserDto>(this.endpoint);
 	}
 }

@@ -1,5 +1,5 @@
-import { TeamDataService } from './team-data.service';
+import { TeamApiService } from './team-api.service';
 
-export { TeamDataService } from './team-data.service';
+export { TeamApiService } from './team-api.service';
 
-export const SERVICES = [TeamDataService];
+export const SERVICES = [TeamApiService];

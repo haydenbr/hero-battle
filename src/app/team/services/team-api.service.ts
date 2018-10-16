@@ -7,7 +7,7 @@ import { TeamDto } from '@hero-battle/team/models';
 import teamData from './team-data.json';
 
 @Injectable()
-export class TeamDataService {
+export class TeamApiService {
 	getTeams(): Observable<TeamDto[]> {
 		return of(teamData);
 	}

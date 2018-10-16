@@ -7,13 +7,13 @@ import { map, switchMap, catchError, tap } from 'rxjs/operators';
 import { SessionActionTypes } from '@hero-battle/core/actions';
 import { LoadingService } from '@hero-battle/core/services';
 import { CurrentUserActions, CurrentUserActionTypes } from '@hero-battle/user/actions';
-import { CurrentUserService } from '@hero-battle/user/services';
+import { CurrentUserApiService } from '@hero-battle/user/services';
 
 @Injectable()
 export class CurrentUserEffects {
 	constructor(
 		private actions: Actions,
-		private currentUserSvc: CurrentUserService,
+		private currentUserSvc: CurrentUserApiService,
 		private loadingCtrl: LoadingService
 	) {}
 

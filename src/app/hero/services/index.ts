@@ -1,5 +1,5 @@
-import { HeroDataService } from './hero-data.service';
+import { HeroApiService } from './hero-api.service';
 
-export { HeroDataService } from './hero-data.service';
+export { HeroApiService } from './hero-api.service';
 
-export const SERVICES = [HeroDataService];
+export const SERVICES = [HeroApiService];

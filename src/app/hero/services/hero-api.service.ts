@@ -7,7 +7,7 @@ import { HeroDto } from '@hero-battle/hero/models';
 import heroData from './hero-data.json';
 
 @Injectable()
-export class HeroDataService {
+export class HeroApiService {
 	getHeroes(): Observable<HeroDto[]> {
 		return of(heroData);
 	}
